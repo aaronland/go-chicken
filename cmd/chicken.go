@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"github.com/thisisaaronland/go-chicken"
 	"os"
-	"strings"
 )
 
 func main() {
@@ -38,26 +37,8 @@ func main() {
 		}
 
 		for buf.Scan() {
-
 			txt := buf.Text()
-
-			chickens := make([]string, 0)
-
-			/*
-
-				things the following doesn't do well (or at all) yet
-				- account for not-english languages
-				- distinguish between "words" and punctuation, etc.
-			*/
-
-			matches := strings.Fields(txt)
-			count := len(matches)
-
-			for i := 0; i < count; i++ {
-				chickens = append(chickens, ch)
-			}
-
-			fmt.Println(strings.Join(chickens, " "))
+			fmt.Println(ch.TextToChicken(txt))
 		}
 	}
 }
