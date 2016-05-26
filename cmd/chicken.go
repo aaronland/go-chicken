@@ -11,7 +11,7 @@ import (
 
 func main() {
 
-     var lang = flag.String("language", "zxx", "...")
+     var lang = flag.String("language", "zxx", "A valid ISO-639-3 language code.")
      flag.Parse()
 
      ch, err := chicken.GetChickenForLanguageTag(*lang)

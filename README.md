@@ -16,6 +16,13 @@ This will build a copy of `chicken` and put it in the [bin](bin) directory.
 
 ## Usage
 
+```
+$> ./bin/chicken -h
+Usage of ./bin/chicken:
+  -language string
+      	    A valid ISO-639-3 language code. (default "zxx")
+```
+
 ### chicken
 
 ```
