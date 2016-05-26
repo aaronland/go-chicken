@@ -179,3 +179,4 @@ $> yes | ./bin/chicken -language hbo -
 ## See also
 
 * http://www.fileformat.info/info/unicode/char/1f414/index.htm
+* https://en.wikipedia.org/wiki/ISO_639-2#Special_situations
