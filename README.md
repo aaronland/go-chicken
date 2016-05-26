@@ -10,12 +10,14 @@ It's early days, still. There is lots left to do. `chicken` is not yet able to d
 make build
 ```
 
+This will build a copy of `chicken` and put it in the `bin` directory (inside this repository).
+
 ## Usage
 
 ### chicken
 
 ```
-$> chicken ./cmd/chicken.go
+$> ./bin/chicken ./cmd/chicken.go
 🐔 🐔
 
 🐔 🐔
@@ -82,7 +84,7 @@ $> chicken ./cmd/chicken.go
 ### language tags
 
 ```
-$> chicken -language eng ./cmd/chicken.go
+$> ./bin/chicken -language eng ./cmd/chicken.go
 chicken chicken
 
 chicken chicken
@@ -148,8 +150,10 @@ chicken
 
 ### reading from STDIN
 
+You can tell `chicken` to read from STDIN by passing `-` as its input argument.
+
 ```
-$> yes | ./chicken -language hbo -
+$> yes | ./bin/chicken -language hbo -
 עוף
 עוף
 עוף
