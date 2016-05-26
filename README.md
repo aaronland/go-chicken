@@ -230,7 +230,7 @@ bok bok bok
 
 ### If you're on a Mac
 
-I'm not suggesting you _should_ do this...only that you can
+I'm not suggesting you _should_ do this... only that you _can_ do this...
 
 ```
 $> yes | ./bin/chicken -language eng -clucking - | while read line ; do say $line; done
