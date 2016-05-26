@@ -155,4 +155,7 @@ $> yes | ./chicken -emoji -
 🐔
 ```
 
-## See also
+## To do
+
+* Multi-language support
+* Replace `-emoji` flag with `xx` language code
