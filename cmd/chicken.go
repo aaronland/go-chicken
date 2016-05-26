@@ -4,24 +4,22 @@ import (
        "bufio"
        "flag"
        "fmt"
+       "github.com/thisisaaronland/go-chicken"
        "os"
        "strings"
 )
 
 func main() {
 
-     var emoji = flag.Bool("emoji", false, "🐔")
-
+     var lang = flag.String("language", "zxx", "...")
      flag.Parse()
 
-     var chicken string
+     ch, err := chicken.GetChickenForLanguageTag(*lang)
 
-     if *emoji {
-     	chicken = "🐔"
-     } else {
-        chicken = "chicken"
+     if err != nil {
+     	panic(err)
      }
-
+     
      for _, path := range flag.Args() {
 
      	 var buf *bufio.Scanner
@@ -52,7 +50,7 @@ func main() {
 	    count := len(matches)
 	    
 	    for i:=0; i < count; i ++{
-	    	chickens = append(chickens, chicken)
+	    	chickens = append(chickens, ch)
 	    }
 
 	    fmt.Println(strings.Join(chickens, " "))

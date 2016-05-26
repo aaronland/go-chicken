@@ -4,79 +4,18 @@
 
 It's early days, still. There is lots left to do...
 
+## Install
+
+```
+make build
+```
+
 ## Usage
 
 ### chicken
 
 ```
 $> chicken ./cmd/chicken.go
-chicken chicken
-
-chicken chicken
-chicken
-chicken
-chicken
-chicken
-chicken
-chicken
-
-chicken chicken chicken
-
-chicken chicken chicken chicken chicken chicken
-
-chicken
-
-chicken chicken chicken
-
-chicken chicken chicken
-chicken chicken chicken
-chicken chicken chicken
-chicken chicken chicken
-chicken
-
-chicken chicken chicken chicken chicken chicken chicken
-
-chicken chicken chicken
-
-chicken chicken chicken chicken chicken
-chicken chicken chicken
-chicken chicken chicken
-
-chicken chicken chicken chicken
-
-chicken chicken chicken chicken chicken
-chicken
-chicken
-
-chicken chicken chicken
-chicken
-
-chicken chicken
-
-chicken chicken chicken
-chicken chicken
-
-chicken chicken
-
-chicken chicken chicken chicken
-
-chicken chicken chicken
-chicken chicken chicken
-
-chicken chicken chicken chicken chicken chicken chicken
-chicken chicken chicken chicken
-chicken
-
-chicken chicken chicken
-chicken
-chicken
-chicken
-```
-
-### 🐔
-
-```
-./chicken -emoji ./cmd/chicken.go
 🐔 🐔
 
 🐔 🐔
@@ -140,22 +79,87 @@ chicken
 🐔
 ```
 
+### language tags
+
+```
+$> chicken -language eng ./cmd/chicken.go
+chicken chicken
+
+chicken chicken
+chicken
+chicken
+chicken
+chicken
+chicken
+chicken
+
+chicken chicken chicken
+
+chicken chicken chicken chicken chicken chicken
+
+chicken
+
+chicken chicken chicken
+
+chicken chicken chicken
+chicken chicken chicken
+chicken chicken chicken
+chicken chicken chicken
+chicken
+
+chicken chicken chicken chicken chicken chicken chicken
+
+chicken chicken chicken
+
+chicken chicken chicken chicken chicken
+chicken chicken chicken
+chicken chicken chicken
+
+chicken chicken chicken chicken
+
+chicken chicken chicken chicken chicken
+chicken
+chicken
+
+chicken chicken chicken
+chicken
+
+chicken chicken
+
+chicken chicken chicken
+chicken chicken
+
+chicken chicken
+
+chicken chicken chicken chicken
+
+chicken chicken chicken
+chicken chicken chicken
+
+chicken chicken chicken chicken chicken chicken chicken
+chicken chicken chicken chicken
+chicken
+
+chicken chicken chicken
+chicken
+chicken
+chicken
+```
+
 ### reading from STDIN
 
 ```
-$> yes | ./chicken -emoji -
-🐔
-🐔
-🐔
-🐔
-🐔
-🐔
-🐔
-🐔
-🐔
+$> yes | ./chicken -language hbo -
+עוף
+עוף
+עוף
+עוף
+עוף
+עוף
+עוף
 ```
 
-## To do
+## Translations
 
-* Multi-language support
-* Replace `-emoji` flag with `xx` language code
+* The current [list of translations](strings/strings.go) is very short and your help is welcome! The goal is to have a 🐔 for every language listed in [ISO 639-3](https://en.wikipedia.org/wiki/List_of_ISO_639-3_codes)
+ 
