@@ -226,6 +226,18 @@ bok bok b'gawk
 bok bok bok
 ```
 
+## But wait... there's more!
+
+### If you're on a Mac
+
+I'm not suggesting you _should_ do this...only that you can
+
+```
+$> yes | ./bin/chicken -language eng -clucking - | while read line ; do say $line; done
+```
+
+_Note: this assumes you're using `bash`._
+
 ## Translations
 
 * The current [list of translations](strings/strings.go) is very short and [your help is welcome](https://github.com/thisisaaronland/go-chicken/pulls)! The goal is to have a 🐔 for every language listed in [ISO 639-3](https://en.wikipedia.org/wiki/List_of_ISO_639-3_codes).
