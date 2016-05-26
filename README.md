@@ -2,7 +2,7 @@
 
 ## Caveats
 
-It's early days, still. There is lots left to do...
+It's early days, still. There is lots left to do. `chicken` is not yet able to distinguish between actual words and things like punctuation or numbers. It will, but not today.
 
 ## Install
 
