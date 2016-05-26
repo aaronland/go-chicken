@@ -90,7 +90,7 @@ $> ./bin/chicken ./cmd/chicken.go
 🐔
 ```
 
-### language tags
+### languages
 
 ```
 $> ./bin/chicken -language eng ./cmd/chicken.go
