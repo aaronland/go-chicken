@@ -21,7 +21,7 @@ func GetChickenForLanguageTag(tag string) (*Chicken, error) {
 }
 
 type Chicken struct {
-	tag     string
+	tag     string	// sudo make me a https://godoc.org/golang.org/x/text/language thingy
 	chicken string
 }
 
