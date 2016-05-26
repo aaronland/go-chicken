@@ -7,6 +7,8 @@ import (
 
 func GetChickenForLanguageTag(tag string) (string, error) {
 
+	// see also: https://github.com/thisisaaronland/go-chicken/issues/1
+	
 	c, ok := chicken.CHICKENS[tag]
 
 	if !ok {
