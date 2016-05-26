@@ -23,7 +23,7 @@ Usage of ./bin/chicken:
       	    A valid ISO-639-3 language code. (default "zxx")
 ```
 
-### chicken
+### Chicken
 
 ```
 $> ./bin/chicken ./cmd/chicken.go
@@ -90,7 +90,7 @@ $> ./bin/chicken ./cmd/chicken.go
 🐔
 ```
 
-### languages
+### Languages
 
 ```
 $> ./bin/chicken -language eng ./cmd/chicken.go
@@ -157,7 +157,7 @@ chicken
 chicken
 ```
 
-### reading from STDIN
+### Reading from STDIN
 
 You can tell `chicken` to read from STDIN by passing `-` as its input argument.
 
@@ -170,6 +170,60 @@ $> yes | ./bin/chicken -language hbo -
 עוף
 עוף
 עוף
+```
+
+## Clucking
+
+_This is still wet paint and not supported for all languages._
+
+```
+$> ./bin/chicken -language eng -clucking ./cmd/chicken.go
+bok bok b'gawk cluck cluck
+
+bok bok b'gawk bok bok b'gawk
+bok bok bok
+cluck cluck
+bok bok bok
+bok bok b'gawk
+bok bok bok
+cluck cluck
+
+bok bok b'gawk bok bok bok cluck cluck
+
+bok bok b'gawk bok bok bok bok bok b'gawk cluck cluck bok bok b'gawk bok bok b'gawk bok bok b'gawk bok bok b'gawk cluck cluck bok bok b'gawk
+bok bok bok cluck cluck bok bok bok bok bok bok bok bok bok cluck cluck cluck cluck bok bok bok
+
+cluck cluck
+
+bok bok b'gawk bok bok b'gawk cluck cluck bok bok b'gawk
+
+cluck cluck bok bok bok cluck cluck cluck cluck bok bok bok
+bok bok bok
+bok bok bok
+
+cluck cluck bok bok bok cluck cluck bok bok bok bok bok bok bok bok bok cluck cluck
+
+cluck cluck bok bok bok cluck cluck
+
+cluck cluck bok bok bok bok bok bok bok bok b'gawk cluck cluck
+bok bok bok bok bok b'gawk bok bok b'gawk
+cluck cluck cluck cluck cluck cluck
+
+bok bok bok bok bok b'gawk bok bok b'gawk bok bok b'gawk
+
+bok bok b'gawk bok bok b'gawk bok bok bok cluck cluck bok bok b'gawk
+bok bok b'gawk
+cluck cluck
+
+cluck cluck bok bok bok bok bok bok
+bok bok bok
+
+bok bok b'gawk cluck cluck cluck cluck
+bok bok bok bok bok bok bok bok b'gawk
+bok bok bok bok bok b'gawk
+bok bok b'gawk
+bok bok b'gawk
+bok bok bok
 ```
 
 ## Translations

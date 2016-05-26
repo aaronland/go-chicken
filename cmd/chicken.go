@@ -11,6 +11,8 @@ import (
 func main() {
 
 	var lang = flag.String("language", "zxx", "A valid ISO-639-3 language code.")
+	var clucking = flag.Bool("clucking", false, "Make chicken noises")
+
 	flag.Parse()
 
 	ch, err := chicken.GetChickenForLanguageTag(*lang)
@@ -38,7 +40,7 @@ func main() {
 
 		for buf.Scan() {
 			txt := buf.Text()
-			fmt.Println(ch.TextToChicken(txt))
+			fmt.Println(ch.TextToChicken(txt, *clucking))
 		}
 	}
 }

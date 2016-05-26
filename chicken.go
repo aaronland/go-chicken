@@ -3,6 +3,7 @@ package chicken
 import (
 	"errors"
 	"github.com/thisisaaronland/go-chicken/strings"
+	"math/rand"
 	"strings"
 )
 
@@ -21,7 +22,7 @@ func GetChickenForLanguageTag(tag string) (*Chicken, error) {
 }
 
 type Chicken struct {
-	tag     string	// sudo make me a https://godoc.org/golang.org/x/text/language thingy
+	tag     string // sudo make me a https://godoc.org/golang.org/x/text/language thingy
 	chicken string
 }
 
@@ -29,7 +30,22 @@ func (ch *Chicken) String() string {
 	return ch.chicken
 }
 
-func (ch *Chicken) TextToChicken(txt string) string {
+func (ch *Chicken) Cluck() string {
+
+	tag := ch.tag
+	clucks, ok := chicken.CLUCKING[tag]
+
+	if !ok {
+		return ch.String()
+	}
+
+	count := len(clucks)
+	idx := rand.Intn(count)
+
+	return clucks[idx]
+}
+
+func (ch *Chicken) TextToChicken(txt string, clucking bool) string {
 
 	chickens := make([]string, 0)
 
@@ -44,7 +60,12 @@ func (ch *Chicken) TextToChicken(txt string) string {
 	count := len(matches)
 
 	for i := 0; i < count; i++ {
-		chickens = append(chickens, ch.String())
+
+		if clucking {
+			chickens = append(chickens, ch.Cluck())
+		} else {
+			chickens = append(chickens, ch.String())
+		}
 	}
 
 	return strings.Join(chickens, " ")
