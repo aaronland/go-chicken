@@ -4,7 +4,7 @@ var CHICKENS = map[string]string{
 	"eng": "chicken",
 	"fre": "poule",
 	"hbo": "עוף",
-	"jpn:" "鶏",
+	"jpn": "鶏",
 	"spa": "pollo",
 	"und": "🐔", // https://en.wikipedia.org/wiki/ISO_639-2#Special_situations
 	"zxx": "🐔", // https://en.wikipedia.org/wiki/ISO_639-2#Special_situations
