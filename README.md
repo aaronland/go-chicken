@@ -176,3 +176,6 @@ $> yes | ./bin/chicken -language hbo -
 
 * The current [list of translations](strings/strings.go) is very short and [your help is welcome](https://github.com/thisisaaronland/go-chicken/pulls)! The goal is to have a 🐔 for every language listed in [ISO 639-3](https://en.wikipedia.org/wiki/List_of_ISO_639-3_codes).
  
+## See also
+
+* http://www.fileformat.info/info/unicode/char/1f414/index.htm
