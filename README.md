@@ -10,7 +10,7 @@ It's early days, still. There is lots left to do. `chicken` is not yet able to d
 make build
 ```
 
-This will build a copy of `chicken` and put it in the `bin` directory (inside this repository).
+This will build a copy of `chicken` and put it in the [bin](bin) directory.
 
 ## Usage
 
