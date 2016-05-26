@@ -174,7 +174,7 @@ $> yes | ./bin/chicken -language hbo -
 
 ## Clucking
 
-_This is still wet paint and not supported for all languages._
+_This is still wet paint and not supported for all languages yet._
 
 ```
 $> ./bin/chicken -language eng -clucking ./cmd/chicken.go
