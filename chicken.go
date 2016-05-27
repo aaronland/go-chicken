@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func GetChickenForLanguageTag(tag string) (*Chicken, error) {
+func GetChickenForLanguageTag(tag string, clucking bool) (*Chicken, error) {
 
 	// see also: https://github.com/thisisaaronland/go-chicken/issues/1
 
@@ -17,16 +17,27 @@ func GetChickenForLanguageTag(tag string) (*Chicken, error) {
 		return nil, errors.New("unknown (or untranslated) chicken")
 	}
 
-	ch := Chicken{tag, c}
+	ch := Chicken{tag, c, clucking}
 	return &ch, nil
 }
 
 type Chicken struct {
-	tag     string // sudo make me a https://godoc.org/golang.org/x/text/language thingy
-	chicken string
+	tag      string // sudo make me a https://godoc.org/golang.org/x/text/language thingy
+	chicken  string
+	clucking bool
 }
 
 func (ch *Chicken) String() string {
+
+	if ch.clucking {
+		return ch.Cluck()
+	}
+
+	return ch.Chicken()
+}
+
+func (ch *Chicken) Chicken() string {
+
 	return ch.chicken
 }
 
@@ -36,7 +47,7 @@ func (ch *Chicken) Cluck() string {
 	clucks, ok := chicken.CLUCKING[tag]
 
 	if !ok {
-		return ch.String()
+		return ch.Chicken()
 	}
 
 	count := len(clucks)
@@ -45,7 +56,7 @@ func (ch *Chicken) Cluck() string {
 	return clucks[idx]
 }
 
-func (ch *Chicken) TextToChicken(txt string, clucking bool) string {
+func (ch *Chicken) TextToChicken(txt string) string {
 
 	chickens := make([]string, 0)
 
@@ -61,11 +72,7 @@ func (ch *Chicken) TextToChicken(txt string, clucking bool) string {
 
 	for i := 0; i < count; i++ {
 
-		if clucking {
-			chickens = append(chickens, ch.Cluck())
-		} else {
-			chickens = append(chickens, ch.String())
-		}
+		chickens = append(chickens, ch.String())
 	}
 
 	return strings.Join(chickens, " ")

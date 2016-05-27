@@ -15,7 +15,7 @@ func main() {
 
 	flag.Parse()
 
-	ch, err := chicken.GetChickenForLanguageTag(*lang)
+	ch, err := chicken.GetChickenForLanguageTag(*lang, *clucking)
 
 	if err != nil {
 		panic(err)
@@ -40,7 +40,7 @@ func main() {
 
 		for buf.Scan() {
 			txt := buf.Text()
-			fmt.Println(ch.TextToChicken(txt, *clucking))
+			fmt.Println(ch.TextToChicken(txt))
 		}
 	}
 }
