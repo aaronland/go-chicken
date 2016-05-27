@@ -140,7 +140,7 @@ $> yes | ./bin/chicken -language hbo -
 
 ## Clucking
 
-_This is still wet paint and not supported for all languages yet._
+_Language support for clucking is not uniformly supported yet._
 
 ```
 $> ./bin/chicken -language eng -clucking ./cmd/chicken.go
@@ -202,7 +202,7 @@ $> ./bin/ucd 😸
 GRINNING CAT FACE WITH SMILING EYES
 ```
 
-Or:
+Which becomes:
 
 ```
 $> ./bin/chicken -
