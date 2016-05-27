@@ -2,9 +2,11 @@ package chicken
 
 import (
 	"errors"
+	"fmt"
 	"github.com/thisisaaronland/go-chicken/strings"
 	"math/rand"
 	"strings"
+	"unicode"
 )
 
 func GetChickenForLanguageTag(tag string, clucking bool) (*Chicken, error) {
@@ -57,6 +59,15 @@ func (ch *Chicken) Cluck() string {
 }
 
 func (ch *Chicken) TextToChicken(txt string) string {
+
+	/*
+	   https://golang.org/pkg/unicode/#IsLetter
+
+	   for idx, char := range txt {
+
+	   	 fmt.Println(idx, char, unicode.IsLetter(char), unicode.IsSpace(char))
+	   }
+	*/
 
 	chickens := make([]string, 0)
 
