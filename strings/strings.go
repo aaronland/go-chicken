@@ -6,6 +6,7 @@ var CHICKENS = map[string]string{
 	"fre": "poule",
 	"hbo": "עוף",
 	"jpn": "鶏",
+	"kor": "치킨",
 	"pol": "kurczak",
 	"spa": "pollo",
 	"und": "🐔", // https://en.wikipedia.org/wiki/ISO_639-2#Special_situations
@@ -20,6 +21,7 @@ var CLUCKING = map[string][]string{
 	"fre": []string{"cot cot cot", "cot cot codet"},
 	"hbo": []string{"קוּר־קוּר־קוּר", "בָּק־בָּק־בָּק"},
 	"jpn": []string{"コッコッ"},
+	"kor": []string{"꼬꼬댁"},
 	"pol": []string{"ko ko"},
 	"spa": []string{"kikiriki"},
 }
