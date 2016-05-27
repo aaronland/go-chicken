@@ -2,10 +2,6 @@
 
 🐔 🐔 🐔
 
-## Caveats
-
-It's early days, still. There is lots left to do. `chicken` is not yet able to distinguish between actual words and things like punctuation or numbers. It will, but not today.
-
 ## Install
 
 ```
@@ -29,65 +25,50 @@ Usage of ./bin/chicken:
 $> ./bin/chicken ./cmd/chicken.go
 🐔 🐔
 
-🐔 🐔
-🐔
-🐔
-🐔
-🐔
-🐔
-🐔
+🐔 (
+	"🐔"
+	"🐔"
+	"🐔"
+	"🐔.🐔/🐔/🐔-🐔"
+	"🐔"
+)
 
-🐔 🐔 🐔
+🐔 🐔() {
 
-🐔 🐔 🐔 🐔 🐔 🐔
+	🐔 🐔 🐔 🐔 🐔.🐔("🐔", "🐔", "🐔 🐔 🐔-639-3 🐔 🐔.")
+	🐔 🐔 🐔 🐔 🐔.🐔("🐔", 🐔, "🐔 🐔 🐔")
 
-🐔
+	🐔.🐔()
 
-🐔 🐔 🐔
+	🐔, 🐔 :🐔 🐔 🐔.🐔(*🐔, *🐔)
 
-🐔 🐔 🐔
-🐔 🐔 🐔
-🐔 🐔 🐔
-🐔 🐔 🐔
-🐔
+	🐔 🐔 !🐔 🐔 🐔 {
+		🐔(🐔)
+	}
 
-🐔 🐔 🐔 🐔 🐔 🐔 🐔
+	🐔 _, 🐔 :🐔 🐔 🐔 🐔.🐔() {
 
-🐔 🐔 🐔
+		🐔 🐔 *🐔.🐔
 
-🐔 🐔 🐔 🐔 🐔
-🐔 🐔 🐔
-🐔 🐔 🐔
+		🐔 🐔 🐔 🐔🐔 🐔 "-" {
+			🐔 🐔 🐔 🐔.🐔(🐔.🐔)
+		} 🐔 {
 
-🐔 🐔 🐔 🐔
+			🐔, 🐔 :🐔 🐔 🐔.🐔(🐔)
 
-🐔 🐔 🐔 🐔 🐔
-🐔
-🐔
+			🐔 🐔 !🐔 🐔 🐔 {
+				🐔(🐔)
+			}
 
-🐔 🐔 🐔
-🐔
+			🐔 🐔 🐔 🐔.🐔(🐔)
+		}
 
-🐔 🐔
-
-🐔 🐔 🐔
-🐔 🐔
-
-🐔 🐔
-
-🐔 🐔 🐔 🐔
-
-🐔 🐔 🐔
-🐔 🐔 🐔
-
-🐔 🐔 🐔 🐔 🐔 🐔 🐔
-🐔 🐔 🐔 🐔
-🐔
-
-🐔 🐔 🐔
-🐔
-🐔
-🐔
+		🐔 🐔.🐔() {
+			🐔 :🐔 🐔 🐔.🐔()
+			🐔.🐔(🐔.🐔(🐔))
+		}
+	}
+}
 ```
 
 ### Languages
@@ -96,65 +77,50 @@ $> ./bin/chicken ./cmd/chicken.go
 $> ./bin/chicken -language eng ./cmd/chicken.go
 chicken chicken
 
-chicken chicken
-chicken
-chicken
-chicken
-chicken
-chicken
-chicken
+chicken (
+	"chicken"
+	"chicken"
+	"chicken"
+	"chicken.chicken/chicken/chicken-chicken"
+	"chicken"
+)
 
-chicken chicken chicken
+chicken chicken() {
 
-chicken chicken chicken chicken chicken chicken
+	chicken chicken chicken chicken chicken.chicken("chicken", "chicken", "chicken chicken chicken-639-3 chicken chicken.")
+	chicken chicken chicken chicken chicken.chicken("chicken", chicken, "chicken chicken chicken")
 
-chicken
+	chicken.chicken()
 
-chicken chicken chicken
+	chicken, chicken :chicken chicken chicken.chicken(*chicken, *chicken)
 
-chicken chicken chicken
-chicken chicken chicken
-chicken chicken chicken
-chicken chicken chicken
-chicken
+	chicken chicken !chicken chicken chicken {
+		chicken(chicken)
+	}
 
-chicken chicken chicken chicken chicken chicken chicken
+	chicken _, chicken :chicken chicken chicken chicken.chicken() {
 
-chicken chicken chicken
+		chicken chicken *chicken.chicken
 
-chicken chicken chicken chicken chicken
-chicken chicken chicken
-chicken chicken chicken
+		chicken chicken chicken chickenchicken chicken "-" {
+			chicken chicken chicken chicken.chicken(chicken.chicken)
+		} chicken {
 
-chicken chicken chicken chicken
+			chicken, chicken :chicken chicken chicken.chicken(chicken)
 
-chicken chicken chicken chicken chicken
-chicken
-chicken
+			chicken chicken !chicken chicken chicken {
+				chicken(chicken)
+			}
 
-chicken chicken chicken
-chicken
+			chicken chicken chicken chicken.chicken(chicken)
+		}
 
-chicken chicken
-
-chicken chicken chicken
-chicken chicken
-
-chicken chicken
-
-chicken chicken chicken chicken
-
-chicken chicken chicken
-chicken chicken chicken
-
-chicken chicken chicken chicken chicken chicken chicken
-chicken chicken chicken chicken
-chicken
-
-chicken chicken chicken
-chicken
-chicken
-chicken
+		chicken chicken.chicken() {
+			chicken :chicken chicken chicken.chicken()
+			chicken.chicken(chicken.chicken(chicken))
+		}
+	}
+}
 ```
 
 ### Reading from STDIN
@@ -178,52 +144,70 @@ _This is still wet paint and not supported for all languages yet._
 
 ```
 $> ./bin/chicken -language eng -clucking ./cmd/chicken.go
+
 bok bok b'gawk cluck cluck
 
-bok bok b'gawk bok bok b'gawk
-bok bok bok
-cluck cluck
-bok bok bok
-bok bok b'gawk
-bok bok bok
-cluck cluck
+bok bok b'gawk (
+	"bok bok b'gawk"
+	"bok bok bok"
+	"cluck cluck"
+	"bok bok bok.bok bok b'gawk/bok bok bok/cluck cluck-bok bok b'gawk"
+	"bok bok bok"
+)
 
-bok bok b'gawk bok bok bok cluck cluck
+cluck cluck bok bok b'gawk() {
 
-bok bok b'gawk bok bok bok bok bok b'gawk cluck cluck bok bok b'gawk bok bok b'gawk bok bok b'gawk bok bok b'gawk cluck cluck bok bok b'gawk
-bok bok bok cluck cluck bok bok bok bok bok bok bok bok bok cluck cluck cluck cluck bok bok bok
+	bok bok bok bok bok b'gawk cluck cluck bok bok b'gawk bok bok b'gawk.bok bok b'gawk("bok bok b'gawk", "cluck cluck", "bok bok b'gawk bok bok bok cluck cluck-639-3 bok bok bok bok bok bok.")
+	bok bok bok cluck cluck cluck cluck bok bok bok cluck cluck.bok bok b'gawk("bok bok b'gawk", cluck cluck, "bok bok b'gawk cluck cluck bok bok bok")
 
-cluck cluck
+	cluck cluck.cluck cluck()
 
-bok bok b'gawk bok bok b'gawk cluck cluck bok bok b'gawk
+	bok bok bok, bok bok bok :bok bok bok cluck cluck bok bok bok.cluck cluck(*bok bok bok, *bok bok bok)
 
-cluck cluck bok bok bok cluck cluck cluck cluck bok bok bok
-bok bok bok
-bok bok bok
+	bok bok bok cluck cluck !cluck cluck bok bok bok cluck cluck {
+		cluck cluck(bok bok bok)
+	}
 
-cluck cluck bok bok bok cluck cluck bok bok bok bok bok bok bok bok bok cluck cluck
+	bok bok bok _, bok bok b'gawk :cluck cluck bok bok bok bok bok b'gawk bok bok b'gawk.cluck cluck() {
 
-cluck cluck bok bok bok cluck cluck
+		cluck cluck cluck cluck *bok bok bok.bok bok b'gawk
 
-cluck cluck bok bok bok bok bok bok bok bok b'gawk cluck cluck
-bok bok bok bok bok b'gawk bok bok b'gawk
-cluck cluck cluck cluck cluck cluck
+		bok bok b'gawk bok bok b'gawk bok bok b'gawk bok bok b'gawkbok bok bok cluck cluck "-" {
+			bok bok b'gawk bok bok b'gawk cluck cluck cluck cluck.bok bok bok(bok bok bok.bok bok bok)
+		} bok bok b'gawk {
 
-bok bok bok bok bok b'gawk bok bok b'gawk bok bok b'gawk
+			cluck cluck, cluck cluck :bok bok bok bok bok bok bok bok b'gawk.bok bok bok(bok bok b'gawk)
 
-bok bok b'gawk bok bok b'gawk bok bok bok cluck cluck bok bok b'gawk
-bok bok b'gawk
-cluck cluck
+			bok bok b'gawk bok bok b'gawk !bok bok bok bok bok b'gawk bok bok bok {
+				cluck cluck(bok bok bok)
+			}
 
-cluck cluck bok bok bok bok bok bok
-bok bok bok
+			cluck cluck bok bok bok cluck cluck cluck cluck.bok bok bok(bok bok b'gawk)
+		}
 
-bok bok b'gawk cluck cluck cluck cluck
-bok bok bok bok bok bok bok bok b'gawk
-bok bok bok bok bok b'gawk
-bok bok b'gawk
-bok bok b'gawk
-bok bok bok
+		cluck cluck bok bok bok.cluck cluck() {
+			bok bok b'gawk :bok bok b'gawk bok bok b'gawk bok bok bok.bok bok bok()
+			cluck cluck.bok bok bok(cluck cluck.bok bok bok(bok bok bok))
+		}
+	}
+}
+```
+
+### Emoji
+
+`chicken` uses the [go-ucd]() library to convert Emoji in to named strings. For example:
+
+```
+$> ./bin/ucd 😸
+GRINNING CAT FACE WITH SMILING EYES
+```
+
+Or:
+
+```
+$> ./bin/chicken -
+😸
+🐔 🐔 🐔 🐔 🐔 🐔
 ```
 
 ## But wait... there's more!

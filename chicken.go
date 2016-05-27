@@ -2,7 +2,9 @@ package chicken
 
 import (
 	"errors"
+	_ "fmt"
 	"github.com/thisisaaronland/go-chicken/strings"
+	"github.com/cooperhewitt/go-ucd"	
 	"math/rand"
 	"strings"
 	"unicode"
@@ -59,13 +61,12 @@ func (ch *Chicken) Cluck() string {
 
 func (ch *Chicken) TextToChicken(txt string) string {
 
-	// https://golang.org/pkg/unicode/#IsLetter
-
 	buf := make([]string, 0)
 	word := false
 
 	for _, char := range txt {
 
+		// https://golang.org/pkg/unicode/#IsLetter
 		// fmt.Println(idx, char, unicode.IsLetter(char), unicode.IsSpace(char))
 
 		if unicode.IsSpace(char) {
@@ -73,6 +74,12 @@ func (ch *Chicken) TextToChicken(txt string) string {
 			buf = append(buf, string(char))
 			word = false
 
+		} else if unicode.IsSymbol(char) {
+
+		        n := ucd.Name(string(char))
+		  	b := ch.TextToChicken(n.Name)
+			buf = append(buf, b)
+			
 		} else if unicode.IsLetter(char) {
 
 			if !word {

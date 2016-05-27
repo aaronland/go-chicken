@@ -16,14 +16,12 @@ rmdeps:
 build:	rmdeps bin
 
 deps:
+	if test ! -d vendor; then mkdir -p vendor; fi
+	@GOPATH=$(GOPATH) go get -u "github.com/cooperhewitt/go-ucd"
+	find vendor -name '.git' -print -type d -exec rm -rf {} +
 
 bin:	self
 	@GOPATH=$(GOPATH) go build -o bin/chicken cmd/chicken.go
-
-vendor: rmdeps deps
-	if test -d vendor/src; then rm -rf vendor/src; fi
-	cp -r src vendor/src
-	find vendor -name '.git' -print -type d -exec rm -rf {} +
 
 fmt:
 	go fmt cmd/*.go
