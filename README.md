@@ -15,8 +15,10 @@ This will build a copy of `chicken` and put it in the [bin](bin) directory.
 ```
 $> ./bin/chicken -h
 Usage of ./bin/chicken:
+  -clucking
+	Make chicken noises
   -language string
-      	    A valid ISO-639-3 language code. (default "zxx")
+	A valid ISO-639-3 language code. (default "zxx")
 ```
 
 ### Chicken
