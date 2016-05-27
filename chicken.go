@@ -79,7 +79,7 @@ func (ch *Chicken) TextToChicken(txt string) string {
 		        n := ucd.Name(string(char))
 		  	b := ch.TextToChicken(n.Name)
 			buf = append(buf, b)
-			
+
 		} else if unicode.IsLetter(char) {
 
 			if !word {

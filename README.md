@@ -195,7 +195,7 @@ cluck cluck bok bok b'gawk() {
 
 ### Emoji
 
-`chicken` uses the [go-ucd]() library to convert Emoji in to named strings. For example:
+`chicken` uses the [go-ucd]() library to convert Emoji (and other symbolic characters) in to named strings. For example:
 
 ```
 $> ./bin/ucd 😸
