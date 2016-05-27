@@ -16,5 +16,8 @@ var CHICKENS = map[string]string{
 var CLUCKING = map[string][]string{
 	"eng": []string{"cluck cluck", "bok bok bok", "bok bok b'gawk"},
 	"fre": []string{"cot cot cot", "cot cot codet"},
+	"hbo": []string{"קוּר־קוּר־קוּר","בָּק־בָּק־בָּק"},
+	"jpn": []string{"コッコッ"},
 	"pol": []string{"ko ko"},
+	"spa": []string{"kikiriki"},
 }
