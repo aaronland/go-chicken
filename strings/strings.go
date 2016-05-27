@@ -1,6 +1,7 @@
 package chicken
 
 var CHICKENS = map[string]string{
+	"ara": "دجاج",
 	"eng": "chicken",
 	"fre": "poule",
 	"hbo": "עוף",
