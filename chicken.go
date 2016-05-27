@@ -2,7 +2,6 @@ package chicken
 
 import (
 	"errors"
-	"fmt"
 	"github.com/thisisaaronland/go-chicken/strings"
 	"math/rand"
 	"strings"
@@ -60,31 +59,32 @@ func (ch *Chicken) Cluck() string {
 
 func (ch *Chicken) TextToChicken(txt string) string {
 
-	/*
-	   https://golang.org/pkg/unicode/#IsLetter
+	// https://golang.org/pkg/unicode/#IsLetter
 
-	   for idx, char := range txt {
+	buf := make([]string, 0)
+	word := false
 
-	   	 fmt.Println(idx, char, unicode.IsLetter(char), unicode.IsSpace(char))
-	   }
-	*/
+	for _, char := range txt {
 
-	chickens := make([]string, 0)
+		// fmt.Println(idx, char, unicode.IsLetter(char), unicode.IsSpace(char))
 
-	/*
+		if unicode.IsSpace(char) {
 
-		things the following doesn't do well (or at all) yet
-		- account for not-english languages
-		- distinguish between "words" and punctuation, etc.
-	*/
+			buf = append(buf, string(char))
+			word = false
 
-	matches := strings.Fields(txt)
-	count := len(matches)
+		} else if unicode.IsLetter(char) {
 
-	for i := 0; i < count; i++ {
+			if !word {
+				buf = append(buf, ch.String())
+				word = true
+			}
 
-		chickens = append(chickens, ch.String())
+		} else {
+			buf = append(buf, string(char))
+			word = false
+		}
 	}
 
-	return strings.Join(chickens, " ")
+	return strings.Join(buf, "")
 }
