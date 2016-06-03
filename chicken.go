@@ -3,8 +3,8 @@ package chicken
 import (
 	"errors"
 	_ "fmt"
+	"github.com/cooperhewitt/go-ucd"
 	"github.com/thisisaaronland/go-chicken/strings"
-	"github.com/cooperhewitt/go-ucd"	
 	"math/rand"
 	"strings"
 	"unicode"
@@ -76,8 +76,8 @@ func (ch *Chicken) TextToChicken(txt string) string {
 
 		} else if unicode.IsSymbol(char) {
 
-		        n := ucd.Name(string(char))
-		  	b := ch.TextToChicken(n.Name)
+			n := ucd.Name(string(char))
+			b := ch.TextToChicken(n.Name)
 			buf = append(buf, b)
 
 		} else if unicode.IsLetter(char) {

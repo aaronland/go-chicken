@@ -16,7 +16,7 @@ var CHICKENS = map[string]string{
 // https://en.wikipedia.org/wiki/Cross-linguistic_onomatopoeias#Chicken_clucking
 
 var CLUCKING = map[string][]string{
-    	"ara": []string{"قرقر", "بق بق بيق"},
+	"ara": []string{"قرقر", "بق بق بيق"},
 	"eng": []string{"cluck cluck", "bok bok bok", "bok bok b'gawk"},
 	"fre": []string{"cot cot cot", "cot cot codet"},
 	"hbo": []string{"קוּר־קוּר־קוּר", "בָּק־בָּק־בָּק"},

@@ -24,6 +24,10 @@ bin:	self
 	@GOPATH=$(GOPATH) go build -o bin/chicken cmd/chicken.go
 
 fmt:
-	go fmt cmd/*.go
-	go fmt chicken.go
-	go fmt strings/*.go
+	@GOPATH=$(GOPATH) go fmt cmd/*.go
+	@GOPATH=$(GOPATH) go fmt chicken.go
+	@GOPATH=$(GOPATH) go fmt strings/*.go
+	@GOPATH=$(GOPATH) go fmt emoji/*.go
+
+alpha:
+	@GOPATH=$(GOPATH) go run cmd/build-alpha-codes.go > emoji/emoji.go
