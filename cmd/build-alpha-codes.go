@@ -41,6 +41,7 @@ func main() {
 	fmt.Printf("%s\n", "var EmojiAlphaCodes = map[string]string{")
 
 	reader := csv.NewReader(bytes.NewReader(body))
+	reader.Read() // skip the first line
 
 	for {
 		row, err := reader.Read()
