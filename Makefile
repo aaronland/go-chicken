@@ -8,6 +8,7 @@ self:	prep
 	if test -d src/github.com/thisisaaronland/go-chicken; then rm -rf src/github.com/thisisaaronland/go-chicken; fi
 	mkdir -p src/github.com/thisisaaronland/go-chicken
 	cp -r strings src/github.com/thisisaaronland/go-chicken/
+	cp -r emoji src/github.com/thisisaaronland/go-chicken/
 	cp chicken.go src/github.com/thisisaaronland/go-chicken/
 
 rmdeps:

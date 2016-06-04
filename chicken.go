@@ -2,10 +2,13 @@ package chicken
 
 import (
 	"errors"
-	_ "fmt"
+	"fmt"
 	"github.com/cooperhewitt/go-ucd"
+	emoji "github.com/thisisaaronland/go-chicken/emoji"
 	"github.com/thisisaaronland/go-chicken/strings"
 	"math/rand"
+	"regexp"
+	"strconv"
 	"strings"
 	"unicode"
 )
@@ -59,7 +62,41 @@ func (ch *Chicken) Cluck() string {
 	return clucks[idx]
 }
 
+func (ch *Chicken) ExpandAlphaCodes(txt string) string {
+
+	cb := func(in []byte) []byte {
+
+		str_in := string(in)
+
+		code, ok := emoji.EmojiAlphaCodes[str_in]
+
+		if !ok {
+			return in
+		}
+
+		num, _ := strconv.ParseInt(code, 0, 32)
+		rune := fmt.Sprintf("%c", num)
+
+		return []byte(rune)
+	}
+
+	re := regexp.MustCompile(`:(\w+):`)
+
+	bytes_in := []byte(txt)
+	bytes_out := re.ReplaceAllFunc(bytes_in, cb)
+
+	return string(bytes_out)
+}
+
 func (ch *Chicken) TextToChicken(txt string) string {
+
+	re := regexp.MustCompile(`:(\w+):`)
+
+	if re.MatchString(txt) {
+		// fmt.Printf("BEFORE %s\n", txt)
+		txt = ch.ExpandAlphaCodes(txt)
+		// fmt.Printf("AFTER %s\n", txt)
+	}
 
 	buf := make([]string, 0)
 	word := false
@@ -76,7 +113,9 @@ func (ch *Chicken) TextToChicken(txt string) string {
 
 		} else if unicode.IsSymbol(char) {
 
+			// fmt.Printf("BEFORE %s\n", char)
 			n := ucd.Name(string(char))
+			// fmt.Printf("AFTER %s\n", n.Name)
 			b := ch.TextToChicken(n.Name)
 			buf = append(buf, b)
 

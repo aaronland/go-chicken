@@ -58,12 +58,12 @@ func main() {
 		alphacode := row[2]
 		aliases := row[3]
 
-		fmt.Printf("\t\t\"%s\":\t\"%s\",\n", alphacode, codepoint)
+		fmt.Printf("\t\t\"%s\":\t\"0x%s\",\n", alphacode, codepoint)
 
 		if aliases != "" {
 
 			for _, alias := range strings.Split(aliases, "|") {
-				fmt.Printf("\t\t\"%s\":\t\"%s\",\n", alias, codepoint)
+				fmt.Printf("\t\t\"%s\":\t\"0x%s\",\n", alias, codepoint)
 			}
 		}
 	}
