@@ -2,7 +2,9 @@ package chicken
 
 var CHICKENS = map[string]string{
 	"ara": "فروج",
+	"cym": "cyw",
 	"eng": "chicken",
+	"fin": "kana",
 	"fre": "poule",
 	"hbo": "עוף",
 	"jpn": "鶏",
@@ -17,7 +19,9 @@ var CHICKENS = map[string]string{
 
 var CLUCKING = map[string][]string{
 	"ara": []string{"قرقر", "بق بق بيق"},
+	"cym": []string{"clwc clwc"},
 	"eng": []string{"cluck cluck", "bok bok bok", "bok bok b'gawk"},
+	"fin": []string{"kotkotus"},
 	"fre": []string{"cot cot cot", "cot cot codet"},
 	"hbo": []string{"קוּר־קוּר־קוּר", "בָּק־בָּק־בָּק"},
 	"jpn": []string{"コッコッ"},
