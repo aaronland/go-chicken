@@ -235,9 +235,21 @@ hello :smiley_cat:
 
 ## But wait... there's more!
 
-### If you're on a Mac
+I'm not suggesting you _should_ do these things... only that you _can_ do these things...
 
-I'm not suggesting you _should_ do this... only that you _can_ do this...
+### Compiling 🐔 
+
+```
+$> go build -o 🐔 cmd/chicken.go
+$> ./🐔 -h
+Usage of ./🐔:
+  -clucking
+   Make chicken noises
+  -language string
+   A valid ISO-639-3 language code. (default "zxx")
+```
+`
+### If you're on a Mac
 
 ```
 $> yes | ./bin/chicken -language eng -clucking - | while read line ; do say $line; done
