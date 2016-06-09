@@ -248,7 +248,7 @@ Usage of ./🐔:
   -language string
    A valid ISO-639-3 language code. (default "zxx")
 ```
-`
+
 ### If you're on a Mac
 
 ```
