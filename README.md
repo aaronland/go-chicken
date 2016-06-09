@@ -140,6 +140,13 @@ $> yes | ./bin/chicken -language hbo -
 עוף
 ```
 
+Or:
+
+```
+$> echo "hello there :chicken:" | ./bin/chicken -
+🐔 🐔 🐔
+```
+
 ## Clucking
 
 _Language support for clucking is not uniformly supported yet._
