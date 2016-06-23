@@ -258,6 +258,8 @@ Yes.
 🐔 🐔 🐔
 ```
 
+_Note that verbose debugging information was enabled for this example._
+
 ## But wait... there's more!
 
 I'm not suggesting you _should_ do these things... only that you _can_ do these things...
