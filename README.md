@@ -292,10 +292,11 @@ _Note: this assumes you're using `bash`._
 
 ![chicken](images/chicken-flickr.png)
 
-[It's all Simon's fault](https://web.archive.org/web/20110424094905/http://hitherto.net/talk_files/sxsw_2008_flickr_intl.pdf)
+[It's all Simon's fault.](https://web.archive.org/web/20110424094905/http://hitherto.net/talk_files/sxsw_2008_flickr_intl.pdf)
 
 ## See also
 
 * http://www.fileformat.info/info/unicode/char/1f414/index.htm
 * https://en.wikipedia.org/wiki/ISO_639-2#Special_situations
 * https://github.com/cooperhewitt/go-ucd
+* https://web.archive.org/web/20110424094905/http://hitherto.net/talk_files/sxsw_2008_flickr_intl.pdf
