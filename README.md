@@ -233,6 +233,31 @@ hello :smiley_cat:
 🐔 🐔 🐔 🐔 🐔 🐔 🐔
 ```
 
+### Unicode 9.0 Emoji
+
+Yes.
+
+```
+./bin/chicken -
+🤙
+2016/06/23 07:44:32 CHAR '129305' is emoji
+2016/06/23 07:44:32 BEFORE UCD '129305'
+2016/06/23 07:44:32 AFTER UCD 'CALL ME HAND'
+2016/06/23 07:44:32 CHAR '67' is a letter
+2016/06/23 07:44:32 CHAR '65' is a letter
+2016/06/23 07:44:32 CHAR '76' is a letter
+2016/06/23 07:44:32 CHAR '76' is a letter
+2016/06/23 07:44:32 CHAR '32' is a space
+2016/06/23 07:44:32 CHAR '77' is a letter
+2016/06/23 07:44:32 CHAR '69' is a letter
+2016/06/23 07:44:32 CHAR '32' is a space
+2016/06/23 07:44:32 CHAR '72' is a letter
+2016/06/23 07:44:32 CHAR '65' is a letter
+2016/06/23 07:44:32 CHAR '78' is a letter
+2016/06/23 07:44:32 CHAR '68' is a letter
+🐔 🐔 🐔
+```
+
 ## But wait... there's more!
 
 I'm not suggesting you _should_ do these things... only that you _can_ do these things...

@@ -17,9 +17,8 @@ rmdeps:
 build:	rmdeps bin
 
 deps:
-	if test ! -d vendor; then mkdir -p vendor; fi
 	@GOPATH=$(GOPATH) go get -u "github.com/cooperhewitt/go-ucd"
-	find vendor -name '.git' -print -type d -exec rm -rf {} +
+	# find vendor -name '.git' -print -type d -exec rm -rf {} +
 
 bin:	self
 	@GOPATH=$(GOPATH) go build -o bin/chicken cmd/chicken.go
