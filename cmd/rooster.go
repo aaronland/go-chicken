@@ -20,7 +20,8 @@ func main() {
 	handler := func(rsp http.ResponseWriter, req *http.Request) {
 
 		opts := sanitize.DefaultOptions()
-
+		opts.AllowNewlines = true
+		
 		query := req.URL.Query()
 
 		lang := "zxx"
