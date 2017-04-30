@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"flag"
 	"fmt"
-	"github.com/facebookgo/grace/gracehttp"	
+	"github.com/facebookgo/grace/gracehttp"
 	"github.com/thisisaaronland/go-chicken"
 	"github.com/whosonfirst/go-sanitize"
 	"io/ioutil"

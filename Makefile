@@ -18,6 +18,8 @@ build:	rmdeps bin
 
 deps:
 	@GOPATH=$(GOPATH) go get -u "github.com/cooperhewitt/go-ucd"
+	@GOPATH=$(GOPATH) go get -u "github.com/facebookgo/grace/gracehttp"
+	@GOPATH=$(GOPATH) go get -u "github.com/whosonfirst/go-sanitize"
 	# find vendor -name '.git' -print -type d -exec rm -rf {} +
 
 bin:	self
