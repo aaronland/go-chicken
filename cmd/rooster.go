@@ -1,14 +1,14 @@
 package main
 
 import (
-	"bufio"
 	"flag"
 	"fmt"
 	"github.com/facebookgo/grace/gracehttp"
 	"github.com/thisisaaronland/go-chicken"
 	"github.com/whosonfirst/go-sanitize"
 	"io/ioutil"
-	"net/http"	
+	"log"
+	"net/http"
 	"os"
 )
 
@@ -19,13 +19,28 @@ func main() {
 
 	handler := func(rsp http.ResponseWriter, req *http.Request) {
 
+		opts := sanitize.DefaultOptions()
+
 		query := req.URL.Query()
 
-		lang := query.Get("language")
-		clucking := query.Get("clucking")
+		lang := "zxx"
+		clucking := false
 
-		opts := sanitize.DefaultOptions()
-		output, _ := sanitize.SanitizeString(input, opts)
+		_, has_lang := query["language"]
+
+		if has_lang {
+
+			language, err := sanitize.SanitizeString(query.Get("language"), opts)
+
+			if err != nil {
+				http.Error(rsp, err.Error(), http.StatusInternalServerError)
+				return
+			}
+
+			lang = language
+		}
+
+		_, clucking = query["clucking"]
 
 		ch, err := chicken.GetChickenForLanguageTag(lang, clucking)
 
@@ -33,7 +48,7 @@ func main() {
 			http.Error(rsp, err.Error(), http.StatusInternalServerError)
 			return
 		}
-		
+
 		body, err := ioutil.ReadAll(req.Body)
 
 		if err != nil {
@@ -41,18 +56,34 @@ func main() {
 			return
 		}
 
-		b := ch.TextToChicken(string(txt))
+		input, err := sanitize.SanitizeString(string(body), opts)
+
+		if err != nil {
+			http.Error(rsp, err.Error(), http.StatusInternalServerError)
+			return
+		}
+
+		output := ch.TextToChicken(input)
 
 		rsp.Header().Set("Access-Control-Allow-Origin", "*")
 		rsp.Header().Set("Content-Type", "text/chicken")
-		
-		rsp.Write(b)		
+
+		rsp.Write([]byte(output))
 	}
-	
+
+	ch_handler := func(rsp http.ResponseWriter, req *http.Request) {
+		rsp.Header().Set("Access-Control-Allow-Origin", "*")
+		rsp.Header().Set("Content-Type", "text/chicken")
+		rsp.Write([]byte("🐔"))
+	}
+
 	endpoint := fmt.Sprintf("%s:%d", *host, *port)
+
+	log.Printf("%s on %s\n", "🐔", endpoint)
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", handler)
+	mux.HandleFunc("/chicken", ch_handler)
 
 	err := gracehttp.Serve(&http.Server{Addr: endpoint, Handler: mux})
 
