@@ -15,7 +15,9 @@ import (
 func main() {
 
 	var host = flag.String("host", "localhost", "The hostname to listen for requests on")
-	var port = flag.Int("port", 8080, "The port number to listen for requests on")
+	var port = flag.Int("port", 1280, "The port number to listen for requests on")	// because CHICKEN is U+1F414 (or 128020)
+
+	flag.Parse()
 
 	handler := func(rsp http.ResponseWriter, req *http.Request) {
 
