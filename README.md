@@ -208,19 +208,19 @@ cluck cluck bok bok b'gawk() {
 
 ```
 $> bin/rooster
-2017/04/30 09:53:53 🐔 on localhost:8080
+2017/04/30 09:53:53 🐓 on localhost:1280
 ```
 
 And then:
 
 ```
-$> curl -X POST 'http://localhost:8080' -d 'Hello world'
+$> curl -X POST 'http://localhost:1280' -d 'Hello world'
 🐔 🐔
 
-$> curl -X POST 'http://localhost:8080?language=eng' -d 'Hello world'
+$> curl -X POST 'http://localhost:1280?language=eng' -d 'Hello world'
 chicken chicken
 
-$> curl -X POST 'http://localhost:8080?language=kor&clucking' -d 'Hello world'
+$> curl -X POST 'http://localhost:1280?language=kor&clucking' -d 'Hello world'
 꼬꼬댁 꼬꼬댁
 ```
 
