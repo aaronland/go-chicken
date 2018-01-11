@@ -255,7 +255,7 @@ hello :smiley_cat:
 🐔 🐔 🐔 🐔 🐔 🐔 🐔
 ```
 
-### Unicode 9.0 Emoji
+### Unicode 10.0 Emoji
 
 Yes.
 
