@@ -12,7 +12,7 @@ FROM golang:alpine AS build-env
 
 RUN apk add --update alpine-sdk
 
-ADD . /go-chickecn
+ADD . /go-chicken
 
 RUN cd /go-chicken; make bin
 
