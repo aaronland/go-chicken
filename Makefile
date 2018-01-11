@@ -40,3 +40,9 @@ fmt:
 
 alpha:
 	@GOPATH=$(GOPATH) go run cmd/build-alpha-codes.go > emoji/emoji.go
+
+docker-build:
+	docker build -t rooster .
+
+docker-debug: docker-build
+	docker run -it -p 1280:1280 rooster
