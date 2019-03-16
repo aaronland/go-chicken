@@ -34,6 +34,9 @@ bin:	self
 	@GOPATH=$(GOPATH) go build -o bin/chicken cmd/chicken.go
 	@GOPATH=$(GOPATH) go build -o bin/rooster cmd/rooster.go
 
+wasm:	self
+	@GOPATH=$(GOPATH) GOARCH=wasm GOOS=js go build -o www/chicken.wasm cmd/chicken-wasm.go
+
 fmt:
 	@GOPATH=$(GOPATH) go fmt cmd/*.go
 	@GOPATH=$(GOPATH) go fmt chicken.go
