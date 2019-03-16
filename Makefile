@@ -18,9 +18,11 @@ rmdeps:
 build:	rmdeps bin
 
 deps:
-	@GOPATH=$(GOPATH) go get -u "github.com/cooperhewitt/go-ucd"
+	@GOPATH=$(GOPATH) go get -u "github.com/aaronland/go-ucd"
 	@GOPATH=$(GOPATH) go get -u "github.com/facebookgo/grace/gracehttp"
 	@GOPATH=$(GOPATH) go get -u "github.com/whosonfirst/go-sanitize"
+	rm -rf src/github.com/cooperhewitt/go-ucd
+	mv src/github.com/aaronland/go-ucd src/github.com/cooperhewitt/
 
 vendor-deps: rmdeps deps
 	if test -d vendor; then rm -rf vendor; fi

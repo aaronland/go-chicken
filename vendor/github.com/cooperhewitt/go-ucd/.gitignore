@@ -1,4 +1,4 @@
 *~
 pkg
 src
-*.sw[op]
+bin/ucd*
