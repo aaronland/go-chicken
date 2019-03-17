@@ -324,7 +324,9 @@ $> curl -X POST 'http://localhost:1280' -d 'Hello world'
 
 ## WASM
 
-[Yes](https://aaronland.github.io/go-chicken/). Run the handy `make wasm` target in the Makefile to build [chicken.wasm](cmd/chicken-wasm.go) and then use it like this:
+[Yes](https://aaronland.github.io/go-chicken/).
+
+Run the handy `make wasm` target in the Makefile to build [chicken.wasm](cmd/chicken-wasm.go) and then use it like this:
 
 ```
      /* 
