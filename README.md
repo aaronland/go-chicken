@@ -372,6 +372,8 @@ Run the handy `make wasm` target in the Makefile to build [chicken.wasm](cmd/chi
      }
 ```
 
+You can see a working example at: https://aaronland.github.io/go-chicken/
+
 ## Background
 
 ![chicken](images/chicken-flickr.png)
