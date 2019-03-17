@@ -2,10 +2,12 @@ textarea {
 	 height:70%;
 	 width:100%;
 	 border: solid thin;
+	 margin-bottom:.5rem;
 }
 
 button {
        border: solid thin;
+       padding:.5rem;
 }
 
 footer {
@@ -17,6 +19,6 @@ footer {
 
 footer p {
        position: absolute;
-       bottom: 5px;
-       right: 5px;
+       bottom: .5rem;
+       right: 2rem;
 }
