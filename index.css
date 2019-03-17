@@ -1,11 +1,22 @@
 textarea {
 	 height:70%;
 	 width:100%;
+	 border: solid thin;
+}
+
+button {
+       border: solid thin;
 }
 
 footer {
-       border-top:2px solid #ccc;
+       border-top:1px dotted #ccc;
        margin-top:1rem;
-       padding-top:.5rem;
+       padding-top:1rem;
        text-align:right;
+}
+
+footer p {
+       position: absolute;
+       bottom: 5px;
+       right: 5px;
 }
