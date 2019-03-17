@@ -324,9 +324,18 @@ $> curl -X POST 'http://localhost:1280' -d 'Hello world'
 
 ## WASM
 
-[Yes](https://aaronland.github.io/go-chicken/).
+[Yes](https://aaronland.github.io/go-chicken/). Run the handy `make wasm` target in the Makefile to build [chicken.wasm](cmd/chicken-wasm.go) and then use it like this:
 
 ```
+     /* 
+
+     this assumes something like:
+     
+     <textarea id="raw"></textarea>
+     <button id="button" onclick="convert();" />
+
+     */
+	
      if (! WebAssembly.instantiateStreaming){
 	 
          WebAssembly.instantiateStreaming = async (resp, importObject) => {
