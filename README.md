@@ -255,7 +255,7 @@ hello :smiley_cat:
 🐔 🐔 🐔 🐔 🐔 🐔 🐔
 ```
 
-### Unicode 10.0 Emoji
+### Emoji
 
 Yes.
 
@@ -320,6 +320,45 @@ docker run -it -p 1280:1280 rooster
 
 $> curl -X POST 'http://localhost:1280' -d 'Hello world'
 🐔 🐔
+```
+
+## WASM
+
+[Yes](https://aaronland.github.io/go-chicken/).
+
+```
+     if (! WebAssembly.instantiateStreaming){
+	 
+         WebAssembly.instantiateStreaming = async (resp, importObject) => {
+             const source = await (await resp).arrayBuffer();
+             return await WebAssembly.instantiate(source, importObject);
+         };
+     }
+
+     const go = new Go();
+
+     let mod, inst;
+
+     WebAssembly.instantiateStreaming(fetch("chicken.wasm"), go.importObject).then(
+	 
+          async result => {
+	      document.getElementById("button").innerText = "Convert";
+	      document.getElementById("button").removeAttribute("disabled");
+              mod = result.module;
+              inst = result.instance;
+	      await go.run(inst);
+          }
+      );
+
+     async function convert() {
+
+	 var raw_el = document.getElementById("raw");
+
+	 var raw_txt = raw_el.value;
+	 var chicken_txt = chicken("zxx", raw_txt);
+
+	 raw_el.value = chicken_txt;
+     }
 ```
 
 ## Background
