@@ -332,7 +332,7 @@ $> curl -X POST 'http://localhost:1280' -d 'Hello world'
      this assumes something like:
      
      <textarea id="raw"></textarea>
-     <button id="button" onclick="convert();" />
+     <button id="button" onclick="convert();" disabled>Loading...</button>
 
      */
 	
