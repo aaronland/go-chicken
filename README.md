@@ -241,23 +241,7 @@ $> ./bin/chicken -
 🐔 🐔 🐔 🐔 🐔 🐔
 ```
 
-### Alpha codes
-
-Yes.
-
-```
-./bin/chicken -
-hello :smiley_cat:
-# BEFORE hello :smiley_cat:
-# AFTER hello 😺
-# BEFORE %!s(int32=128570)
-# AFTER SMILING CAT FACE WITH OPEN MOUTH
-🐔 🐔 🐔 🐔 🐔 🐔 🐔
-```
-
-### Emoji
-
-Yes.
+Or:
 
 ```
 ./bin/chicken -
@@ -281,6 +265,20 @@ Yes.
 ```
 
 _Note that verbose debugging information was enabled for this example._
+
+### Alpha codes
+
+Yes.
+
+```
+./bin/chicken -
+hello :smiley_cat:
+# BEFORE hello :smiley_cat:
+# AFTER hello 😺
+# BEFORE %!s(int32=128570)
+# AFTER SMILING CAT FACE WITH OPEN MOUTH
+🐔 🐔 🐔 🐔 🐔 🐔 🐔
+```
 
 ## But wait... there's more!
 
