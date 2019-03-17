@@ -1,15 +1,19 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>&#128020;</title>
+    <title>Text To &#128020; Converter</title>
     <script src="wasm_exec.js"></script>
     <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
 
   <body>
-    <h1>&#128020;</h1>
-    <textarea id="raw" placeholder="Enter text here that you wish to convert to &#128020;" style="height:80%; width:100%;"></textarea>
+    <h1>Text To &#128020; Converter</h1>
+    <textarea id="raw" placeholder="Enter text here that you wish to convert to &#128020;"></textarea>
     <div id="chicken"></div>
     <button id="button" onclick="convert();" disabled>Loading...</button>
+    <footer>
+      this is a thing powered by <a href="https://github.com/aaronland/go-chicken">go-chicken</a>
+    </footer>
   </body>
 </html>

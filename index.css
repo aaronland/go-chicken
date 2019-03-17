@@ -1,0 +1,11 @@
+textarea {
+	 height:70%;
+	 width:100%;
+}
+
+footer {
+       border-top:2px solid #ccc;
+       margin-top:1rem;
+       padding-top:.5rem;
+       text-align:right;
+}
