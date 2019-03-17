@@ -34,7 +34,7 @@ func main() {
 
 	js.Global().Set("chicken", chicken_func)
 
-	c := make(chan bool, 0)
+	c := make(chan struct{}, 0)
 
 	log.Println("WASM chicken initialized")
 	<-c
