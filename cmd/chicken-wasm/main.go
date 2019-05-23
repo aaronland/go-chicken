@@ -1,7 +1,7 @@
 package main
 
 import (
-       "github.com/thisisaaronland/go-chicken"
+	"github.com/aaronland/go-chicken"
 	"log"
 	"syscall/js"
 )
@@ -12,7 +12,7 @@ func main() {
 
 	chicken_func = js.FuncOf(func(this js.Value, args []js.Value) interface{} {
 
-		if (len(args) != 2){
+		if len(args) != 2 {
 			log.Println("Invalid arguments")
 			return nil
 		}

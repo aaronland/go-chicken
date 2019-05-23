@@ -3,9 +3,9 @@ package chicken
 import (
 	"errors"
 	"fmt"
-	"github.com/cooperhewitt/go-ucd"
-	emoji "github.com/thisisaaronland/go-chicken/emoji"
-	"github.com/thisisaaronland/go-chicken/strings"
+	emoji "github.com/aaronland/go-chicken/emoji"
+	"github.com/aaronland/go-chicken/strings"
+	"github.com/aaronland/go-ucd"
 	"log"
 	"math/rand"
 	"regexp"

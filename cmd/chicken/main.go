@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"flag"
 	"fmt"
-	"github.com/thisisaaronland/go-chicken"
+	"github.com/aaronland/go-chicken"
 	"os"
 )
 

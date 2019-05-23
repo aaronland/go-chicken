@@ -5,7 +5,7 @@
 ## Install
 
 ```
-make build
+make tools
 ```
 
 This will build a copy of `chicken` and put it in the [bin](bin) directory.

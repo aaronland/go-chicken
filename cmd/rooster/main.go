@@ -3,8 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
+	"github.com/aaronland/go-chicken"
 	"github.com/facebookgo/grace/gracehttp"
-	"github.com/thisisaaronland/go-chicken"
 	"github.com/whosonfirst/go-sanitize"
 	"io/ioutil"
 	"log"
@@ -15,7 +15,7 @@ import (
 func main() {
 
 	var host = flag.String("host", "localhost", "The hostname to listen for requests on")
-	var port = flag.Int("port", 1280, "The port number to listen for requests on")	// because ROOSTER is U+1F413 (or 128019)
+	var port = flag.Int("port", 1280, "The port number to listen for requests on") // because ROOSTER is U+1F413 (or 128019)
 
 	flag.Parse()
 
@@ -23,7 +23,7 @@ func main() {
 
 		opts := sanitize.DefaultOptions()
 		opts.AllowNewlines = true
-		
+
 		query := req.URL.Query()
 
 		lang := "zxx"
