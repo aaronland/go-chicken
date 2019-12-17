@@ -4,7 +4,6 @@ import (
 	"flag"
 	"fmt"
 	"github.com/aaronland/go-chicken"
-	"github.com/facebookgo/grace/gracehttp"
 	"github.com/whosonfirst/go-sanitize"
 	"io/ioutil"
 	"log"
@@ -88,7 +87,7 @@ func main() {
 	mux.HandleFunc("/", handler)
 	mux.HandleFunc("/chicken", ch_handler)
 
-	err := gracehttp.Serve(&http.Server{Addr: endpoint, Handler: mux})
+	err := http.ListenAndServe(endpoint, mux)
 
 	if err != nil {
 		log.Fatal(err)
